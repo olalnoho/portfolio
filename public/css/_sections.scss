@@ -1,0 +1,487 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 95vh;
+  background-color: $bgc;
+  color: white;
+
+  &__overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #191c26;
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
+  }
+
+  &__hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    height: 98%;
+    background: linear-gradient(90deg, $main-color-darker 0%, $main-color 35%, $main-color-lighter 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
+
+    .btn {
+      text-align: center;
+      font-size: 1.4rem;
+      margin: 5rem auto 0 auto;
+      width: 20rem;
+      animation: fade-in 1.5s ease;
+    }
+  }
+
+  &__tagline {
+    text-align: center;
+    width: 50%;
+    margin: 3rem auto 0 auto;
+    font-size: 2.2rem;
+    animation: left-fade-in 1.5s ease;
+  }
+}
+
+.introduction {
+  padding: 5rem 1rem 0 1rem;
+  &__heading {
+    text-align: center;
+    margin-bottom: 6rem;
+    h2 {
+      display: inline-block;
+      background-clip: text;
+      -webkit-background-clip: text;
+      text-transform: uppercase;
+      background-image: linear-gradient(90deg, $main-color-darker 20%, $main-color 40%, $main-color-lighter 100%);
+      color: transparent;
+    }
+  }
+  &__main {
+    max-width: 95rem;
+    margin: auto;
+    display: flex;
+
+    &__text {
+      padding: 1rem;
+      margin-right: 2rem;
+    }
+    &__images {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      align-items: center;
+      & img {
+        transition: all 0.54s;
+        width: 100%;
+        object-fit: contain;
+
+        &:nth-child(3) {
+          align-self: start;
+          width: 50%;
+          grid-column: 1/-1;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+.skills {
+  background-color: #000;
+  display: flex;
+  clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0 100%);
+  background-color: #191c26;
+  padding: 1rem;
+  &__overlay {
+    padding: 0 2rem;
+    flex: 1;
+    clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0 100%);
+    background: linear-gradient(90deg, $main-color-darker 0%, $main-color 35%, $main-color-lighter 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__container {
+    flex: 1;
+    padding: 10rem 0;
+    display: flex;
+    max-width: 95rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__item {
+      background-color: #eee;
+      padding: 2rem;
+      font-size: 1.6rem;
+
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      align-items: center;
+
+      transition: all 0.4s;
+      opacity: 0.7;
+
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
+
+      i {
+        color: $main-color;
+        font-size: 6rem;
+        align-self: center;
+        margin-bottom: 2rem;
+      }
+
+      & h3 {
+        text-align: center;
+      }
+
+      & ul {
+        text-align: center;
+      }
+
+      &:hover {
+        transform: translateY(-1rem);
+      }
+    }
+  }
+}
+
+.projects {
+  padding: 5rem 1rem 0 1rem;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 6rem;
+  }
+
+  &__grid {
+    margin: auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 35rem);
+    align-content: center;
+    justify-content: center;
+    gap: 6rem;
+  }
+
+  .project {
+    box-shadow: 0.2rem 0.2rem 0.6rem black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50rem;
+    width: 100%;
+    backface-visibility: hidden;
+
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      flex: 0.3;
+      color: white;
+      background-color: $bgc3;
+
+      h3 {
+        margin: 0;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+  margin-bottom: 5rem;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  &:nth-child(odd) {
+    .flip-card-front {
+      header {
+        background-color: $secondary-color !important;
+      }
+    }
+    .flip-card-back {
+      background-color: $secondary-color !important;
+    }
+  }
+  &:nth-child(even) {
+    .flip-card-front {
+      header {
+        background-color: $main-color !important;
+      }
+    }
+
+    .flip-card-back {
+      background-color: $main-color;
+    }
+  }
+
+  background-color: transparent;
+  width: 100%;
+  height: 35rem;
+  perspective: 1500px; /* Remove this if you don't want the 3D effect */
+
+  &-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s ease-out;
+    transform-style: preserve-3d;
+  }
+
+  &:hover &-inner {
+    transform: rotateY(180deg);
+  }
+
+  &-front {
+    box-shadow: 0.2rem 0.2rem 0.8rem rgb(167, 167, 167);
+    &__content {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      header {
+        border: 2px solid white;
+        font-family: "Geo";
+        letter-spacing: 3px;
+        h3 {
+          font-size: 3rem;
+          margin-bottom: 0;
+        }
+        color: white;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10rem;
+      }
+
+      ul {
+        color: darkslategray;
+        margin-bottom: 1rem;
+        padding: 2rem 1rem;
+        font-size: 1.6rem;
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  &-back {
+    background-color: $main-color;
+    color: white;
+    transform: rotateY(180deg);
+
+    &__content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      color: white;
+      padding: 1rem;
+
+      p {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+      }
+
+      .button-group {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &-front,
+  &-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+}
+
+// -- Footer ---
+.footer {
+  margin-top: 10rem;
+  height: 30rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+
+  &__overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #191c26;
+    padding: 1rem;
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, $main-color-darker 0%, $main-color 35%, $main-color-lighter 100%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    a {
+      color: white;
+    }
+  }
+
+  &__filler {
+    margin-top: 10rem;
+  }
+
+  &__links {
+    margin-top: 10rem;
+  }
+}
+
+@media only screen and(max-width: 1300px) {
+  .projects {
+    &__grid {
+      grid-template-columns: repeat(2, 35rem);
+    }
+  }
+}
+
+@media only screen and(max-width: 1000px) {
+  .skills {
+    &__container {
+      padding: 12rem 0;
+      align-items: center;
+      flex-direction: column;
+      &__item {
+        width: 56%;
+        display: grid;
+        grid-template-columns: 10rem 1fr;
+        grid-template-rows: min-content 1fr;
+        justify-items: center;
+
+        i {
+          grid-column: 1/2;
+          grid-row: 1/2;
+        }
+        h3 {
+          grid-column: 1/2;
+          grid-row: 2/3;
+        }
+
+        ul {
+          grid-row: 1/-1;
+          grid-column: 2/3;
+        }
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and(max-width: 900px) {
+  .projects {
+    &__grid {
+      width: 40rem;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .flip-card {
+    justify-self: center;
+    align-self: center;
+    width: 90%;
+    height: 41.5rem;
+    &-inner {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-front {
+      header {
+        border: none;
+      }
+    }
+
+    &-front,
+    &-back {
+      position: relative;
+      flex: 1;
+    }
+    &-back,
+    &:hover &-inner {
+      transform: rotateY(0deg);
+    }
+  }
+}
+
+@media only screen and(max-width: 700px) {
+  .introduction {
+    padding: 5rem 1rem 5rem 1rem;
+    &__heading {
+      margin-bottom: 0;
+    }
+    &__main {
+      flex-direction: column;
+      &__text {
+        order: 2;
+        text-align: center;
+        margin-right: 0;
+      }
+
+      &__images {
+        order: 1;
+        justify-content: center;
+        display: flex;
+        margin-bottom: 4rem;
+        img {
+          max-width: 10rem;
+          align-self: center !important;
+        }
+      }
+    }
+  }
+  .skills {
+    &__container {
+      &__item {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media only screen and(max-width: 500px) {
+  .skills {
+    &__container {
+      padding: 15rem 0;
+      &__item {
+        width: 90%;
+      }
+    }
+  }
+
+  .projects {
+    &__grid {
+      width: unset;
+    }
+  }
+}

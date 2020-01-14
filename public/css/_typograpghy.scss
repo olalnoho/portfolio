@@ -1,0 +1,22 @@
+.heading-1 {
+   font-size: 12rem;
+   margin-bottom: 2rem;
+}
+
+.heading-2 {
+   font-size: 3.5rem;
+   margin-bottom: 2rem;
+}
+
+.heading-3 {
+   font-size: 2rem;
+   margin-bottom: 1rem;
+}
+
+.lead {
+   font-size: 1.4rem;
+   color: #777;
+   &:not(:last-child) {
+      margin-bottom: 2rem;
+   }
+}

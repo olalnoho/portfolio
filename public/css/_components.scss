@@ -1,0 +1,57 @@
+.btn {
+  display: inline-block;
+  font-family: inherit;
+  outline: none;
+  border: none;
+  padding: 1.5rem 4rem;
+  cursor: pointer;
+  transition: all 0.4s;
+
+  border: 1px solid white;
+  color: white;
+  &--primary {
+    background-color: darken($main-color, 2%);
+    &:hover {
+      background-color: darken($main-color, 3%);
+    }
+  }
+
+  &--secondary {
+    background-color: $bgc3;
+  }
+
+  &--thirdary {
+    background-color: darken($secondary-color, 2%);
+    &-light {
+      background-color: darken($secondary-color-lighter, 2%);
+    }
+  }
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.21);
+}
+
+.btn:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.card {
+  box-shadow: 0.2rem 0.2rem 0.4rem #ccc;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $bgc;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 1px solid blanchedalmond;
+  border-radius: 1rem;
+  background-color: $main-color-darker;
+}
