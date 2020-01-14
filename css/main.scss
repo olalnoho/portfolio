@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Geo|Poppins&display=swap");
+
+@import "./vars";
+@import "./keyframes";
+@import "./components";
+@import "./typograpghy";
+@import "./sections";
+@import "./svganimation";
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Poppins, sans-serif;
+  color: white;
+}
+
+body {
+  color: black;
+  padding: 2rem;
+  background-color: $bgc;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media only screen and(max-width: 800px) {
+  body {
+    padding: 0;
+  }
+}
+
+@media only screen and(max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}
