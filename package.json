@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploy": "gh-pages -d public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "homepage": "https://olalnoho.github.io/portfolio",
   "dependencies": {
     "gh-pages": "^2.2.0"
   }

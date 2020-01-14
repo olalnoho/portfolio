@@ -140,6 +140,12 @@
   margin-bottom: 2rem;
 }
 
+@media only screen and (max-width: 700px) {
+  .heading-2 {
+    font-size: 3rem;
+  }
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
