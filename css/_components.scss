@@ -39,7 +39,17 @@
 }
 
 .card {
-  box-shadow: 0.2rem 0.2rem 0.4rem #ccc;
+  box-shadow: 0.2rem 0.2rem 0.4rem #bbb;
+}
+
+.button-group {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.centerText {
+  text-align: center;
 }
 
 ::-webkit-scrollbar {
