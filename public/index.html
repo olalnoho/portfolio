@@ -8,7 +8,7 @@
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
       integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
    <link rel="stylesheet" href="css/main.css" />
-   <title>Document</title>
+   <title>Portfolio</title>
 </head>
 
 <body>
@@ -86,16 +86,16 @@
             </p>
          </div>
          <div class="introduction__main__images">
-            <img src="https://cdn.pixabay.com/photo/2015/04/23/17/41/javascript-736400_960_720.png" />
+            <img src="./images/javascript.png" />
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" />
+            <img src="./images/Node.js_logo.svg" />
+            <img src="./images/Database-postgres.svg" />
          </div>
       </div>
    </section>
    <section class="skills">
       <div class="skills__overlay">
          <div class="skills__container">
-
             <div class="skills__container__item">
                <i class="fas fa-desktop"></i>
                <h3 class="heading-3">FRONT END</h3>
@@ -122,19 +122,20 @@
                <i class="fas fa-database"></i>
                <h3 class="heading-3">DATABASE</h3>
                <ul>
-                  <li>MongoDB</li>
-                  <li>MySQL</li>
                   <li>PostgresQL</li>
+                  <li>MongoDB</li>
                   <li>Redis</li>
+                  <li>MySQL</li>
                </ul>
             </div>
             <div class="skills__container__item">
                <i class="fas fa-code"></i>
                <h3 class="heading-3">Other</h3>
                <ul>
+                  <li>Git</li>
+                  <li>Docker</li>
                   <li>Python</li>
                   <li>Regex</li>
-                  <li>Git</li>
                </ul>
             </div>
          </div>
@@ -142,150 +143,125 @@
    </section>
    <section id="projects" class="projects">
       <header class="projects__header">
-
          <h2 class="heading-2">
             My Projects
          </h2>
       </header>
       <div class="projects__grid">
-         <div class="flip-card">
-            <div class="flip-card-inner">
-               <div class="flip-card-front">
-                  <div class="flip-card-front__content">
-                     <header>
-                        <h3 class="heading-3">
-                           YourSpace
-                        </h3>
-                     </header>
-                     <ul>
-                        <li> CSS | SASS </li>
-                        <li> React </li>
-                        <li> GraphQL | Apollo </li>
-                        <li> PostgreSQL </li>
-                        <li> Socket.IO </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="flip-card-back">
-                  <div class="flip-card-back__content">
-                     <p>Social media site. <br /> Message board, profiles and private messaging.</p>
-                     <div class="button-group">
-                        <a class="btn btn--thirdary" href="http://alho-socialmedia.herokuapp.com" target="_blank">Live
-                           Demo</a>
-                        <a class="btn btn--thirdary-light" href="https://github.com/olalnoho/Social-media-like-site"
-                           target="_blank">Source
-                           code</a>
-                     </div>
-                  </div>
-               </div>
+         <div class="card project">
+            <header class="project__header">
+               <h3 class="heading-3 centerText">
+                  Social Media site
+               </h3>
+               <p class="centerText"> Message board, profiles and private messaging.</p>
+            </header>
+            <div class="project__content">
+               <ul>
+                  <li> CSS | SASS </li>
+                  <li> React </li>
+                  <li> GraphQL | Apollo </li>
+                  <li> PostgreSQL </li>
+                  <li> Socket.IO </li>
+               </ul>
             </div>
+            <footer class="project__footer">
+               <div class="button-group">
+                  <a class="btn btn--thirdary" href="http://alho-socialmedia.herokuapp.com" target="_blank">Live
+                     Demo</a>
+                  <a class="btn btn--thirdary-light" href="https://github.com/olalnoho/Social-media-like-site"
+                     target="_blank">Source
+                     code</a>
+               </div>
+            </footer>
          </div>
-         <div class="flip-card">
-            <div class="flip-card-inner">
-               <div class="flip-card-front">
-                  <div class="flip-card-front__content">
-                     <header>
-                        <h3 class="heading-3">
-                           Forum
-                        </h3>
-                     </header>
-                     <ul>
-                        <li> CSS | SASS </li>
-                        <li> React </li>
-                        <li> GraphQL | Apollo </li>
-                        <li> MongoDB | Mongoose </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="flip-card-back">
-                  <div class="flip-card-back__content">
-                     <p>Forum, with partial BBCode support using a custom parser.</p>
-                     <div class="button-group">
-                        <a class="btn btn--primary" href="http://alho-forum.herokuapp.com" target="_blank">Live Demo</a>
-                        <a class="btn btn--secondary" href="https://github.com/olalnoho/Forum" target="_blank">Source
-                           code</a>
-                     </div>
-                  </div>
-               </div>
+         <div class="card project">
+            <header class="project__header">
+               <h3 class="heading-3 centerText">
+                  Forum
+               </h3>
+               <p class="centerText">With partial BBC-code support using a custom parser.</p>
+            </header>
+            <div class="project__content">
+               <ul>
+                  <li> CSS | SASS </li>
+                  <li> React </li>
+                  <li> GraphQL | Apollo </li>
+                  <li> MongoDB | Mongoose </li>
+               </ul>
             </div>
+            <footer class="project__footer">
+               <div class="button-group">
+                  <a class="btn btn--primary" href="http://alho-forum.herokuapp.com" target="_blank">Live Demo</a>
+                  <a class="btn btn--secondary" href="https://github.com/olalnoho/Forum" target="_blank">Source
+                     code</a>
+               </div>
+            </footer>
          </div>
-         <div class="flip-card">
-            <div class="flip-card-inner">
-               <div class="flip-card-front">
-                  <div class="flip-card-front__content">
-                     <header>
-                        <h3 class="heading-3">
-                           Blog
-                        </h3>
-                     </header>
-                     <ul>
-                        <li> CSS | SASS </li>
-                        <li> React </li>
-                        <li> GraphQL | Apollo </li>
-                        <li> PostgreSQL </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="flip-card-back">
-                  <div class="flip-card-back__content">
-                     <p>Blog app, with tag and search features.</p>
-                     <div class="button-group">
-                        <a class="btn btn--thirdary" href="http://alho-blog.herokuapp.com" target="_blank">Live Demo</a>
-                        <a class="btn btn--thirdary-light" href="https://github.com/olalnoho/Blog" target="_blank">Source
-                           code</a>
-                     </div>
-                  </div>
-               </div>
+         <div class="card project">
+            <header class="project__header">
+               <h3 class="heading-3 centerText">
+                  Blog
+               </h3>
+               <p class="centerText">
+                  <p>With tag and search features.</p>
+               </p>
+            </header>
+            <div class="project__content">
+               <ul>
+                  <li> CSS | SASS </li>
+                  <li> React </li>
+                  <li> GraphQL | Apollo </li>
+                  <li> PostgreSQL </li>
+               </ul>
             </div>
+            <footer class="project__footer">
+               <div class="button-group">
+                  <a class="btn btn--thirdary" href="http://alho-blog.herokuapp.com" target="_blank">Live Demo</a>
+                  <a class="btn btn--thirdary-light" href="https://github.com/olalnoho/Blog" target="_blank">Source
+                     code</a>
+               </div>
+            </footer>
          </div>
-         <div class="flip-card">
-            <div class="flip-card-inner">
-               <div class="flip-card-front">
-                  <div class="flip-card-front__content">
-                     <header>
-                        <h3 class="heading-3">
-                           Trello-like
-                        </h3>
-                     </header>
-                     <ul>
-                        <li> CSS | SASS </li>
-                        <li> React </li>
-                        <li> Node | Express </li>
-                        <li> MongoDB | Mongoose </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="flip-card-back">
-                  <div class="flip-card-back__content">
-                     <p>Trello-like site. Create projects, lists, tasks with drag and drop support. </p>
-                     <div class="button-group">
-                        <a class="btn btn--primary" href="http://alho-tracker.herokuapp.com" target="_blank">Live
-                           Demo</a>
-                        <a class="btn btn--secondary" href="https://github.com/olalnoho/trello-like/tree/jwt"
-                           target="_blank">Source
-                           code</a>
-                     </div>
-                  </div>
-               </div>
+         <div class="card project">
+            <header class="project__header">
+               <h3 class="heading-3 centerText">
+                  Trello-like
+               </h3>
+               <p class="centerText">For managing projects <br /> Create lists and tasks, with drag-n-drop support.</p>
+            </header>
+            <div class="project__content">
+               <ul>
+                  <li> CSS | SASS </li>
+                  <li> React </li>
+                  <li> Node | Express </li>
+                  <li> MongoDB | Mongoose </li>
+               </ul>
             </div>
+            <footer class="project__footer">
+               <div class="button-group">
+                  <a class="btn btn--primary" href="http://alho-tracker.herokuapp.com" target="_blank">Live
+                     Demo</a>
+                  <a class="btn btn--secondary" href="https://github.com/olalnoho/trello-like/tree/jwt"
+                     target="_blank">Source
+                     code</a>
+               </div>
+            </footer>
          </div>
       </div>
    </section>
    <footer class="footer">
-      <div class="footer__overlay">
-         <div class="footer__content">
-            <div class="footer__links">
-               <a href="http://github.com/olalnoho">Github</a>
-            </div>
-            <div class="footer__logo">
-               LOGO
-            </div>
-            <div class="footer__filler">
-               This is a test
-            </div>
-         </div>
+      <div class="footer__content">
+         <a href="https://github.com/olalnoho">
+            Github
+            <i class="fab fa-github"></i>
+         </a>
       </div>
    </footer>
 </body>
 
 </html>
+
+<!-- <div class="footer__links">
+   <i class="fab fa-github"></i>
+   <a href="https://github.com/olalnoho">My Github</a>
+</div> -->
